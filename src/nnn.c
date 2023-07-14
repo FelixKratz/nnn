@@ -6492,7 +6492,7 @@ static inline void markhovered(void)
 {
 	if (cfg.showdetail && ndents) { /* Bold forward arrowhead */
 		tocursor();
-		addch('>' | A_BOLD);
+		addstr("");
 	}
 }
 
