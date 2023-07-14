@@ -6592,7 +6592,7 @@ static void redraw(char *path)
 		addch(' ');
 	}
 
-	attron(A_UNDERLINE | COLOR_PAIR(cfg.curctx + 1));
+	attron(A_BOLD | COLOR_PAIR(cfg.curctx + 1));
 
 	/* Print path */
 	bool in_home = set_tilde_in_path(path);
@@ -6634,7 +6634,7 @@ static void redraw(char *path)
 	if (in_home)
 		reset_tilde_in_path(path);
 
-	attroff(A_UNDERLINE | COLOR_PAIR(cfg.curctx + 1));
+	attroff(A_BOLD | COLOR_PAIR(cfg.curctx + 1));
 
 	/* Go to first entry */
 	if (curscroll > 0) {
